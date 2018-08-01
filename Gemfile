@@ -7,7 +7,8 @@ end
 
 # base
 gem 'rails', '~> 5.1.3'
-gem 'therubyracer', platforms: :ruby, github: 'cowboyd/therubyracer'
+#gem 'therubyracer', platforms: :ruby, github: 'cowboyd/therubyracer'
+gem 'mini_racer'
 
 # database
 gem 'mysql2', '>= 0.3.18', '< 0.5'
