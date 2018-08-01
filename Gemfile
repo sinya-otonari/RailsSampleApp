@@ -37,6 +37,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'rubocop'
   gem 'annotate'
+  gem 'overcommit'
 end
 
 group :test do
