@@ -46,3 +46,5 @@ group :test do
   gem 'factory_bot_rails'
   gem 'database_cleaner'
 end
+
+gem 'devise'
