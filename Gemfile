@@ -48,3 +48,5 @@ group :test do
 end
 
 gem 'devise'
+gem 'sidekiq'
+gem 'sinatra'
