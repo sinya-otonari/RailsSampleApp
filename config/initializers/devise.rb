@@ -11,7 +11,7 @@ Devise.setup do |config|
   # config.secret_key = '91469e0a0b7eb9716bf59770fcbb033ed1758fceedc08b43476bb7959e68ecfd1f577ab4a4bf1004ff47c985784f6d02ab66e38065f7b41ec514740d506c7c4e'
 
   config.secret_key = Rails.application.secrets.SECRET_TOKEN
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -43,6 +43,8 @@ Devise.setup do |config|
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
   # config.authentication_keys = [:email]
+  config.authentication_keys = [:login]
+
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
