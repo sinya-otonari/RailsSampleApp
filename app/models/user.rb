@@ -30,6 +30,7 @@
 #
 
 class User < ApplicationRecord
+  has_many :posts, inverse_of: :user
   validates :name,
             presence: true,
             uniqueness: { case_sensitive: false }
@@ -52,9 +53,9 @@ class User < ApplicationRecord
     devise_mailer.send(notification, self, *args).deliver_later
   end
 
-  def login=(login)
-    @login = login
-  end
+  #def login=(login)
+  #  @login = login
+  #end
 
   def login
     @login || self.name || self.email
