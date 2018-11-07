@@ -27,6 +27,7 @@
 #  avatar_content_type    :string(255)
 #  avatar_file_size       :integer
 #  avatar_updated_at      :datetime
+#  posts_count            :integer          default(0), not null
 #
 
 class User < ApplicationRecord
@@ -75,5 +76,9 @@ class User < ApplicationRecord
 
   def validate_name
     errers.add(:name, :invalid) if User.where(email: name).exists?
+  end
+
+  def created_month
+    created_at.strftime('%Y 年 %m 月')
   end
 end

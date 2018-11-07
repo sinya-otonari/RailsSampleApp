@@ -10,6 +10,6 @@
 #
 
 class Post < ApplicationRecord
-  #belongs_to :user, inverse_of: :posts
   belongs_to :user
+  counter_culture :user
 end
